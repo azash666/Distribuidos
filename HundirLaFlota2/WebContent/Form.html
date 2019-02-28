@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Registro de jugadores</title>
+</head>
+<body>
+	<div style="width: 80%; float: left; margin: 0 10%">				<!-- Para que aparezca centrado, se le mete un margen izdo y dcho del 10% -->
+		<form action="/action_page.php">
+			<fieldset>													<!-- El fieldset es para juntar todo lo que se envia en el formulario -->
+				<legend style="color: blue; font-size: 25px">			<!-- Esto sirve para darle el título al formulario -->
+					Registro de jugadores de "Hundir la Flota"
+				</legend>
+				<div style="width: 100%; height: 20px; padding: 5px">
+					<div style="width: 200px; float: left;">Nombre (*): </div>
+					<div style="float: left;"><input type="text" name="nombre" required></div>		<!-- El atributo required sirve para que el campo sea obligatorio -->
+				</div>
+				
+				<div style="width: 100%; height: 20px; padding: 5px">
+					<div style="width: 200px; float: left">Primer apellido (*): </div>
+					<div style="float: left"><input type="text" name="apellido1" required></div>
+				</div>
+				
+				<div style="width: 100%; height: 20px; padding: 5px">
+					<div style="width: 200px; float: left">Segundo apellido: </div>
+					<div style="float: left"><input type="text" name="apellido2"></div>
+				</div>
+				
+				<div style="width: 100%; height: 20px; padding: 5px">
+					<div style="width: 200px; float: left">DNI (*): </div>
+					<div style="float: left"><input type="text" name="dni" required></div>
+				</div>
+				
+				<div style="width: 100%; height: 20px; padding: 5px">
+					<div style="width: 200px; float: left">Email: </div>
+					<div style="float: left">
+						<input type="email" name="correo">		<!--  El tipo email sirve para que se hagan las comprobaciones de que sea formato correo electrónico -->
+					</div>
+				</div>
+				
+				<div style="width: 100%; height: 20px; padding: 5px">
+					<div style="width: 200px; float: left">Tipo de pago (*): </div>
+					<div style="float: left">
+												<!--  Los radiobutton han de tener el mismo nombre para que sean excluyentes, 
+														algo parecido al radiogroup de java -->
+						<input type="radio" name="pago" value="contrarreembolso" required> Contrarreembolso
+						<input type="radio" name="pago" value="visa" required> Tarjeta VISA
+						<input type="radio" name="pago" value="cheque" required> Cheque
+					</div>
+				</div>
+				
+				<div style="width: 100%; height: 20px; padding: 5px">
+					<div style="width: 200px; float: left">Contraseña (*): </div>
+					<div style="float: left"><input type="password" name="contrasena" required></div>
+				</div>
+				
+				<div style="width: 100%; height: 20px; padding: 5px">
+					<div style="width: 200px; float: left">Repita su contraseña (*): </div>
+					<div style="float: left"><input type="password" name="contrasena2" required></div>
+				</div>
+				
+				<div style="width: 100%; height: 20px; padding: 5px">
+					<div style="width: 200px; float: left"><input type="submit" value="Enviar datos"></div>
+					<div style="float: left"><input type="reset" value="Borrar datos"></div>
+				</div>
+			</fieldset>
+			(*) Los campos con asterisco son obligatorios
+		</form>
+	</div>
+</body>
+</html>
